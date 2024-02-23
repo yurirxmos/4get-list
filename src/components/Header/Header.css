@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3rem 0rem 2rem;
+}
+
+.header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.header p {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.header small {
+    margin: 5px 0;
+    font-weight: 300;
+    font-size: 10px;
+    opacity: 80%;
+    text-align: center;
+    width: 50%;
+    padding: 3px 12px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.header small b {
+    font-weight: 700;
+}
+
+.header hr {
+    border: solid 1px rgb(255, 255, 255);
+    width: 200px;
+    opacity: 50%;
+    margin-top: 5px;
+}
+
+.header img {
+    width: 30px;
+}
