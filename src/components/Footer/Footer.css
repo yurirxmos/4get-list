@@ -1,0 +1,23 @@
+.footer {
+    font-weight: 200;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    color: white;
+    font-size: 13px;
+    opacity: 50%;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 300ms;
+}
+
+.footer a:hover {
+    opacity: 70%;
+}
+
+.footer b {
+    font-weight: 700;
+}
