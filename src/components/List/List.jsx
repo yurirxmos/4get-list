@@ -46,7 +46,7 @@ export default function List() {
         <div className="list">
             <form onSubmit={handleSubmit}>
                 <div className="item">
-                    <input type="text" value={text} onChange={handleChange} placeholder="Fazer atividade, lavar o carro, etc ..." />
+                    <input type="text" value={text} onChange={handleChange} placeholder="Fazer atividade, lavar o carro, etc ..." maxLength={22}/>
                     <button type="submit">+</button>
                 </div>
             </form>
