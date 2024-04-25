@@ -30,10 +30,17 @@ export default function List() {
     };
 
     const handleDelete = (index) => {
-        const updatedItems = items.filter((_, i) => i !== index);
-        setItems(updatedItems);
-        localStorage.setItem("todoListItems", JSON.stringify(updatedItems)); // Salvando no localStorage ao excluir um item
+        // Exibir alerta de confirmação
+        const confirmDelete = window.confirm("Tem certeza que deseja deletar este item?");
+    
+        // Se o usuário confirmar, prosseguir com a exclusão
+        if (confirmDelete) {
+            const updatedItems = items.filter((_, i) => i !== index);
+            setItems(updatedItems);
+            localStorage.setItem("todoListItems", JSON.stringify(updatedItems)); // Salvando no localStorage ao excluir um item
+        }
     };
+    
 
     const handleToggleComplete = (index) => {
         const updatedItems = [...items];
@@ -46,7 +53,7 @@ export default function List() {
         <div className="list">
             <form onSubmit={handleSubmit}>
                 <div className="item">
-                    <input type="text" value={text} onChange={handleChange} placeholder="Fazer atividade, lavar o carro, etc ..." maxLength={22}/>
+                    <input type="text" value={text} onChange={handleChange} placeholder="Fazer atividade, lavar o carro, etc ..." maxLength={50}/>
                     <button type="submit">+</button>
                 </div>
             </form>
